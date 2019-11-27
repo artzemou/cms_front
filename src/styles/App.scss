@@ -1,0 +1,365 @@
+@import 'styles/_colors.scss';
+
+@function fluid($value) {
+  @return $value / 16 + rem;
+}
+
+:focus {
+  outline: #d9d9d9 auto 1px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+li {
+  list-style-type: none;
+}
+button {
+  cursor: pointer;
+}
+input {
+  pointer-events: initial;
+  font-size: fluid(18);
+  flex: 1;
+  padding: 1rem 0.5rem;
+  border: 0 solid $grey;
+  // box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.1),
+  // inset -1px -1px 0 0 rgba(0, 0, 0, 0.1);
+  background-color: $veryLightGrey;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.App-header {
+  min-height: calc(100rem / 16);
+  background-color: lightskyblue;
+}
+.Locales-select {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  z-index: 999;
+  cursor: pointer;
+  li {
+    &::after {
+      content: '/';
+      padding: 0.25rem;
+    }
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.View-content {
+  display: flex;
+  p {
+    margin: 1rem;
+  }
+}
+
+/***Webtree***/
+.Nav {
+  display: flex;
+  flex-direction: column;
+  width: calc(350rem / 16);
+  word-break: break-word;
+  margin: 0;
+  padding: 0;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.Nav-item {
+  position: relative;
+  border: 1px solid $grey;
+  background-color: $lightGrey;
+}
+.Nav-link {
+  display: block;
+  padding: 0.5rem 2rem;
+  color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/***ListItem****/
+
+.Droppable-list {
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.075);
+  display: flex;
+}
+
+.Droppable-item {
+  position: relative;
+  padding: 0;
+  border: 1px solid $grey;
+  background-color: $lightGrey;
+  width: calc(100% / 3);
+  cursor: grab;
+
+  &-toolbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
+    cursor: pointer;
+    button {
+      pointer-events: initial;
+    }
+  }
+
+  &-content {
+    padding: 1rem 2rem;
+    pointer-events: none;
+    min-height: calc(52rem / 16);
+  }
+
+  &-index {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.25rem;
+    font-size: 0.8rem;
+  }
+  img {
+    width: calc(150rem / 16);
+  }
+  &--disable {
+    pointer-events: none;
+  }
+
+  &--placeholder {
+    min-height: calc(100rem / 16);
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid $grey;
+  }
+}
+
+.New-droppable-item {
+  width: 100%;
+  position: relative;
+  background-color: $lightGrey;
+  border: 1px solid $grey;
+  .New-droppable-item-toolbar {
+    margin: 1rem;
+  }
+  .New-droppable-item-content {
+    display: flex;
+  }
+}
+
+/*input Nao*/
+.input {
+  position: relative;
+  margin: 1em;
+  width: calc(100% - 2em);
+}
+.input--nao {
+  overflow: hidden;
+}
+.input__field:focus {
+  outline: none;
+}
+.input__field--nao {
+  padding: 0.5em 0em 0.25em;
+  width: 100%;
+  background: transparent;
+  font-size: 1.25em;
+}
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  background: #f0f0f0;
+  font-weight: 400;
+}
+.input__label--nao {
+  font-size: 100%;
+  padding: 0em;
+  pointer-events: none;
+  transform-origin: 0 0;
+  transition: transform 0.2s 0.15s, color 1s;
+  transition-timing-function: ease-out;
+}
+
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #696969;
+  font-weight: bold;
+  font-size: 150%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.input__field--nao:focus + .input__label--nao,
+.input--filled .input__label--nao {
+  color: #333;
+  -webkit-transform: translate3d(0, -0.25em, 0) scale3d(0.75, 0.75, 1);
+  transform: translate3d(0, -0.25em, 0) scale3d(0.75, 0.75, 1);
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+.graphic--nao {
+  stroke: #92989e;
+  pointer-events: none;
+  -webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
+  transition: transform 0.7s, stroke 0.7s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+
+.graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+}
+.input__field--nao:focus ~ .graphic--nao,
+.input--filled .graphic--nao {
+  stroke: #333;
+  -webkit-transform: translate3d(-66.6%, 0, 0);
+  transform: translate3d(-66.6%, 0, 0);
+}
+
+.Images-upload {
+  button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/****SignUp*********/
+.sign-up {
+  min-height: 100vh;
+  background-color: $lightGrey;
+}
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20% 1rem;
+  max-width: calc(300rem / 16);
+  input {
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    border: 1px solid $grey;
+  }
+  input[type='submit'] {
+    background-color: $grey;
+  }
+}
+
+/****Animation *****/
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes textVariation {
+  0% {
+    letter-spacing: 0px;
+    font-size: calc(6rem / 16);
+  }
+  30% {
+    letter-spacing: 5px;
+  }
+  100% {
+    letter-spacing: 0px;
+    font-size: calc(12rem / 16);
+  }
+}
+
+@keyframes typedjsBlink {
+  50% {
+    opacity: 0;
+  }
+}
+/*transition-group*/
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 0;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+.Transition-group {
+  position: relative;
+  width: 100%;
+}
+
+.Route-section {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*material-ui*/
+.MuiTreeItem-content:hover {
+  background-color: transparent !important;
+}
+.MuiTreeItem-root:focus > .MuiTreeItem-content {
+  background-color: transparent !important;
+}
+
+/* Ripple effect */
+.Ripple {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  user-select: none;
+}
+form {
+  display: flex;
+  .Ripple {
+    display: inline-flex;
+  }
+}
+@keyframes useRippleAnimation {
+  to {
+    transform: scale(15);
+    opacity: 0;
+  }
+}

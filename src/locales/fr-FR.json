@@ -1,0 +1,40 @@
+{
+  "home": {
+    "title": "@lias_FR {myName}"
+  },
+  "localeSelect": {
+    "fr-FR": "fr",
+    "en-US": "en"
+  },
+  "nav": {
+    "signup": "S'inscrire",
+    "signin": "S'identifier",
+    "signout": "Se déconnecter",
+    "home": "Accueil",
+    "webtreemanager": "Organiser l'arborescence du site",
+    "usersList": "liste utilisateurs"
+  },
+  "signIn": {
+    "title": "Se connecter",
+    "email": "Adresse email",
+    "pwd": "Mot de passe"
+  },
+  "signUp": {
+    "title": "Créer un compte utilisateur",
+    "email": "Adresse email",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "pwd": "Mot de passe",
+    "confirm": "Confiramtion du mot de passe",
+    "required": "Champ obligatoire",
+    "errorEmail": "Adresse email invalide",
+    "please": "S'il vous plait : )",
+    "errorPwd": "Le mot de passe doit contenir (au moins) une majuscule, un nombre, un caractère spécial et huit caractères",
+    "errorNotEqual": "Les mots de passe ne sont pas identiques",
+    "errorAllreadyExists": "Ce compte existe déjà"
+  },
+  "newItem": "Pour créer une nouvelle page",
+  "typeNewTitle": "écrire le titre",
+  "validate": "et valider",
+  "404": "Page inconnue"
+}

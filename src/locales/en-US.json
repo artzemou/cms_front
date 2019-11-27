@@ -1,0 +1,40 @@
+{
+  "home": {
+    "title": "@lias_EN {myName}"
+  },
+  "localeSelect": {
+    "fr-FR": "fr",
+    "en-US": "en"
+  },
+  "nav": {
+    "signup": "Sign up",
+    "signin": "Sign in",
+    "signout": "Sign out",
+    "home": "Home",
+    "webtreemanager": "Web tree manager",
+    "usersList": "users list"
+  },
+  "signIn": {
+    "title": "Sign In",
+    "email": "Email",
+    "pwd": "Password"
+  },
+  "signUp": {
+    "title": "Create an account",
+    "email": "Email",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "pwd": "Password",
+    "confirm": "Password confirmation",
+    "required": "Required field",
+    "errorEmail": "Email is invalid",
+    "please": "Please : )",
+    "errorPwd": "The string must contain (at least) one uppercase alphabetical character, one numeric character and eight characters",
+    "errorNotEqual": "Passwords are not the same",
+    "errorAllreadyExists": "Account already exists"
+  },
+  "newItem": "To create a new page",
+  "typeNewTitle": "type the title",
+  "validate": "and press Validate",
+  "404": "Not found"
+}

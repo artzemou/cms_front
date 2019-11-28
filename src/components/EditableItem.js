@@ -4,15 +4,14 @@ import { Upload } from './Upload'
 import { GET_ALL_ITEMS, UPDATE_ITEM } from '../queries/items'
 import { useMutation } from '@apollo/react-hooks'
 import useReactRouter from 'use-react-router'
+import '../styles/EditableItem.css'
 
 function EditableItem(props) {
   const { location } = useReactRouter()
   const [updateItem] = useMutation(UPDATE_ITEM)
-  // const [id, setId] = useState(null)
 
   const { register, handleSubmit } = useForm()
   const onSubmit = (data, e) => {
-    // e.target.reset()
     if (data)
       updateItem({
         variables: {
@@ -45,7 +44,6 @@ function EditableItem(props) {
           Drag / Edit
         </button>
         <button onClick={props.onDelete}>Delete</button>
-        <button>Sélectionner une image</button>
       </div>
       <div className="Editable-item-index">{props.data.sort + 1}</div>
       <Upload {...props} />
@@ -57,7 +55,6 @@ function EditableItem(props) {
           ref={register}
         />
 
-        {/* <div>{props.data.id}</div> */}
       </div>
     </div>
   )

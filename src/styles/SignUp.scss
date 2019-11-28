@@ -1,0 +1,17 @@
+@import 'styles/_colors.scss';
+
+.SignUp-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20% 1rem;
+  max-width: calc(300rem / 16);
+  input {
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    border: 1px solid $grey;
+  }
+  input[type='submit'] {
+    background-color: $grey;
+  }
+}

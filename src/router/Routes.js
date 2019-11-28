@@ -27,6 +27,7 @@ import SortableComponent from '../components/SortableComponent'
 function Routes(props) {
   const { data: data1} = useQuery(GET_ALL_PAGES)
   const { data: data2 } = useQuery(GET_ALL_P_AGES)
+  console.log(data1)
   if (!data1) {
     return <div>loading...</div>
   }
@@ -117,7 +118,7 @@ function Routes(props) {
                         }
                       />
                     </li>
-                    {data1.allPages.map(page => (
+                    { data1.allPages.map(page => (
                       <li key={page.id} className="Nav-item">
                         <Ripple
                           content={
@@ -137,7 +138,7 @@ function Routes(props) {
                                 }
                               />
                             </li>
-                          ):null)}
+                          ) : null)}
                             </ul> 
                         </li>
                     ))}
@@ -173,7 +174,7 @@ function Routes(props) {
                             <DroppableItemsList />
                           </Route>
                         ))}
-                          {data2.allP_ages.map(p =>  (
+                        { data2.allP_ages.map(p =>  (
                             <Route key={p.id} path={`/${p.id}`} exact>
                             <Helmet>
                               <title>{p.id}</title>
@@ -185,7 +186,6 @@ function Routes(props) {
                           path={`/${r(T.translate('nav.webtreemanager'))}`}
                           render={() =>
                             props.state.authToken ? (
-                              // <WebTreeManager {...props} />
                               <SortableComponent />
                             ) : (
                               <SignIn {...props} />

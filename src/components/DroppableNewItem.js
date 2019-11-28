@@ -19,7 +19,7 @@ export const DroppableNewItem = () => {
         variables: {
           input: {
             content: input.content,
-            sort: data.allItems.length++,
+            sort: null,
             pageId: location.pathname,
           },
         },

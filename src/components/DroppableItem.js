@@ -5,7 +5,6 @@ import { GET_ALL_ITEMS, DELETE_ITEM } from '../queries/items'
 import { useMutation } from '@apollo/react-hooks'
 
 function DroppableItem(props) {
-  // const { data, loading } = useQuery(filesQuery)
   const { location } = useReactRouter()
   const [deleteItem] = useMutation(DELETE_ITEM)
   const onDelete = id => {

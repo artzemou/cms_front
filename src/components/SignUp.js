@@ -5,6 +5,7 @@ import { SIGN_UP } from '../queries/users'
 import useForm from 'react-hook-form'
 // import { useHistory } from 'react-router-dom'
 import T from 'i18n-react'
+import '../styles/SignUp.css'
 
 export const SignUp = props => {
   // const history = useHistory()
@@ -37,7 +38,7 @@ export const SignUp = props => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="sign-up-form">
+    <form onSubmit={handleSubmit(onSubmit)} className="SignUp-form">
       <h3>{T.translate('signUp.title')}</h3>
       <div>
         <label htmlFor="email">{T.translate('signUp.email')}</label>

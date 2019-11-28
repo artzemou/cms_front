@@ -6,6 +6,7 @@ import { RetryLink } from 'apollo-link-retry'
 import { concat } from 'apollo-link'
 
 console.log(process.env)
+//'https://localhost:4000/graphql'
 const httpLink = createUploadLink({ uri: process.env.REACT_APP_URI })
 // Set up your cache.
 const cache = new InMemoryCache()

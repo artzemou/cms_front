@@ -16,7 +16,7 @@
     "array-move": "^2.2.0",
     "graphql-tag": "^2.10.1",
     "i18n-react": "^0.7.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lodash-es": "^4.17.15",
     "lodash-move": "^1.1.1",
     "node-sass": "^4.12.0",

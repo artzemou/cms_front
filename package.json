@@ -31,7 +31,7 @@
     "react-hook-form": "^3.24.1",
     "react-intl": "^3.4.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-sortable-hoc": "^1.10.1",
     "react-spring": "7.2.6",
     "react-stripe-elements": "^5.1.0",
